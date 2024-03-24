@@ -2,6 +2,19 @@
 
 .App {
   width: 350px;
-  height: 500px;
-  background: rgba(13, 29, 45, 0.7);
+  border-radius: 5px;
+  box-shadow: 5px 5px 7px #087e92;
+}
+
+#toggleDark {
+  position: absolute;
+  right: 5%;
+  top: 3%;
+}
+
+.body-light-mode {
+  background: rgb(238, 238, 238);
+}
+.app-light-mode {
+  box-shadow: 5px 5px 7px #333;
 }

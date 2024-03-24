@@ -5,7 +5,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border: 2px solid grey;
     border-bottom: 2px solid rgba(0, 0, 255, .3);
+    background: transparent;
 }
 
 .display {
@@ -17,7 +19,8 @@
     outline: none;
     color: #fff;
 }
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-    appearance: none;
+
+.light-mode {
+    color: #333;
 }
+
