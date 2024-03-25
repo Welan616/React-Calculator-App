@@ -4,10 +4,12 @@
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 1fr);
     height: 380px;
-    background: rgba(13, 29, 45, 0.2);
+    background: transparent; 
+    backdrop-filter: blur(4px);
+    z-index: 2;
 }
 .btn {
-    background: rgba(13, 29, 45, 0.6);
+    background: inherit;
     color: #fff;
     border: 1px solid rgba(0, 0, 255, .3);
     font-weight: 800;

@@ -16,7 +16,7 @@ function toggleLightMode() {
   });
   const body = document.getElementById('body');
   body.classList.toggle('body-light-mode');
-  const app = document.getElementById('app');
+  const app = document.querySelector('.calculator');
   app.classList.toggle('app-light-mode');
 
   const mainDisplay = document.querySelectorAll('.display');
@@ -32,33 +32,33 @@ function toggleLightMode() {
 
   return (
       <div className="App" id="app">
-         <div class="container">
-        <div class="cube">
-            <div class="face front"></div>
-            <div class="face back"></div>
-            <div class="face right"></div>
-            <div class="face left"></div>
-            <div class="face top"></div>
-            <div class="face bottom"></div>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="cube">
-            <div class="face front"></div>
-            <div class="face back"></div>
-            <div class="face right"></div>
-            <div class="face left"></div>
-            <div class="face top"></div>
-            <div class="face bottom"></div>
-        </div>
-    </div>
         <button type='button' onClick={toggleLightMode} id='toggleDark'>
         <img src={isSun} alt='' id='mode' />
         </button>
+        <div className="container">
+        <div className="cube">
+            <div className="face front"></div>
+            <div className="face back"></div>
+            <div className="face right"></div>
+            <div className="face left"></div>
+            <div className="face top"></div>
+            <div className="face bottom"></div>
+        </div>
+        </div>
+        <div className='calculator'>
       <Screen darkMode={isDay} setDarkMode={setIsDay} value={val} output={outPutVal}/>
       <Buttons darkMode={isDay} setDarkMode={setIsDay} btn={setVal} output={outPutVal} value={val} setOutPut={setOutPutVal}/>
-
+      </div>
+      <div className="container" id='sec-con'>
+        <div className="cube">
+            <div className="face front"></div>
+            <div className="face back"></div>
+            <div className="face right"></div>
+            <div className="face left"></div>
+            <div className="face top"></div>
+            <div className="face bottom"></div>
+        </div>
+    </div>
       </div>
     )
 }
