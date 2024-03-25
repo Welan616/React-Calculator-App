@@ -10,6 +10,8 @@
   position: absolute;
   right: 5%;
   top: 3%;
+  width: 30px;
+  height: 30px;
 }
 
 .body-light-mode {
@@ -17,4 +19,51 @@
 }
 .app-light-mode {
   box-shadow: 5px 5px 7px #333;
+}
+
+.container {
+	perspective: 800px;
+	margin: 0 auto;
+}
+.cube {
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	animation: spin 5s linear infinite;
+}
+.face {
+	position: absolute;
+	bottom: 5%;
+	width: 100px;
+	height: 100px;
+	background-size: cover;
+	border: 2px solid #73da04;
+	border-radius: 10px;
+	box-shadow: 5px 5px 5px #7f700b;
+}
+.face.front {
+	transform: translateZ(100px);
+}
+.face.back {
+	transform: rotateY(180deg) translateZ(100px);
+}
+.face.right {
+	transform: rotateY(90deg) translateZ(100px);
+}
+.face.left {
+	transform: rotateY(-90deg) translateZ(100px);
+}
+.face.top {
+	transform: rotateX(90deg) translateZ(100px);
+}
+.face.bottom {
+	transform: rotateX(-90deg) translateZ(100px);
+}
+@keyframes spin {
+	0% {
+		transform: rotateX(0deg) rotateY(0deg);
+	}
+	100% {
+		transform: rotateX(360deg) rotateY(360deg);
+	}
 }
